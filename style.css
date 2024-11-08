@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui,sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+#accordion {
+    background-color: lightblue;
+    width: 80%;
+    margin: auto;
+}
+
+#accordion button {
+    border: none;
+    width: 100%;
+    text-align: left;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 2px solid teal;
+    cursor: pointer;
+}
+
+#accordion .up::after {
+    content: '\02c4';
+    float: right;
+    border: 1px solid #333;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#accordion .down::after {
+    content: '\02c5';
+    float: right;
+}
+
+/* \02c5 */
+.normal {
+    height: 0px;
+    transition:all .5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.active {
+    height: 100px;
+    padding: 20px
+}
